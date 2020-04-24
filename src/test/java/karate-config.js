@@ -16,6 +16,6 @@ function fn() {
   }
 
   //设置请求超时时间
-  karate.configuration('connectTimeout', 10000);
+  karate.configure('connectTimeout', 10000);
   return config;
 }
