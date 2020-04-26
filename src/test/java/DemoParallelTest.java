@@ -22,7 +22,7 @@ public class DemoParallelTest {
     @Test
     public void testParallel(){
 //        System.setProperty("karate.env","demo");
-        Results results =Runner.parallel(getClass(),20,"target/karate-demo");
+        Results results =Runner.parallel(getClass(),20,"target/karatedemoReport");
 //        Results results = Runner.path("classpath:examples").tags("~@ignore").parallel(10);
 //        results.setReportDir("target/karate-demo");
         generateReport(results.getReportDir());
@@ -33,7 +33,7 @@ public class DemoParallelTest {
         Collection<File> jsonFiles = FileUtils.listFiles(new File(karateOutputPath), new String[] {"json"}, true);
         List<String> jsonPaths = new ArrayList<>(jsonFiles.size());
         jsonFiles.forEach(file -> jsonPaths.add(file.getAbsolutePath()));
-        Configuration config = new Configuration(new File("target"), "karate-demo");
+        Configuration config = new Configuration(new File("target"), "karatedemoReport");
         ReportBuilder reportBuilder = new ReportBuilder(jsonPaths, config);
         reportBuilder.generateReports();
     }
