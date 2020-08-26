@@ -4,15 +4,19 @@ function fn() {
   if (!env) {
     env = 'dev';
   }
+
+  //默认环境配置
   var config = {
     env: env,
-	myVarName: 'someValue'
+    vMockURL: 'http://172.16.0.115:9191'
   }
   if (env == 'dev') {
     // customize
     // e.g. config.foo = 'bar';
+    config.vMockURL = 'http://172.16.0.115:9191'
   } else if (env == 'e2e') {
     // customize
+    config.vMockURL = 'http://172.16.0.115:9191'
   }
 
   //设置请求超时时间

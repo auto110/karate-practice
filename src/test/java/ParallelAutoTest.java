@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class DemoParallelTest {
+public class ParallelAutoTest {
     @BeforeClass
     public static void beforeClass() throws Exception{
         //可在此处启动后台服务
@@ -21,10 +21,8 @@ public class DemoParallelTest {
 
     @Test
     public void testParallel(){
-//        System.setProperty("karate.env","demo");
         Results results =Runner.parallel(getClass(),20,"target/karatedemoReport");
-//        Results results = Runner.path("classpath:examples").tags("~@ignore").parallel(10);
-//        results.setReportDir("target/karate-demo");
+
         generateReport(results.getReportDir());
         assertTrue(results.getErrorMessages(), results.getFailCount()==0);
     }
