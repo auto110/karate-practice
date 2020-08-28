@@ -1,3 +1,4 @@
+@ignore
 Feature: v-mock 模拟接口的测试
 
   Background:

@@ -8,7 +8,7 @@ function fn() {
   //默认环境配置
   var config = {
     env: env,
-    vMockURL: 'http://172.16.0.115:9191'
+    vMockURL: 'http://127.0.0.1:9191'
   }
   if (env == 'dev') {
     // customize

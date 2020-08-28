@@ -1,3 +1,4 @@
+import com.intuit.karate.KarateOptions;
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
 import static org.junit.Assert.*;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+@KarateOptions(tags = {"~@ignore"})
 public class ParallelAutoTest {
     @BeforeClass
     public static void beforeClass() throws Exception{
