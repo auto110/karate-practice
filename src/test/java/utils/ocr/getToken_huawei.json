@@ -1,0 +1,23 @@
+{
+  "auth": {
+    "identity": {
+      "methods": [
+        "password"
+      ],
+      "password": {
+        "user": {
+          "name": "hw02392356",
+          "password": "1234abcd",
+          "domain": {
+            "name": "hw02392356"
+          }
+        }
+      }
+    },
+    "scope": {
+      "project": {
+        "id": "06e83cc35a800f002f0cc001e65aaacc"
+      }
+    }
+  }
+}
