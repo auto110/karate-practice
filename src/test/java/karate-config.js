@@ -14,9 +14,11 @@ function fn() {
     // customize
     // e.g. config.foo = 'bar';
     config.vMockURL = 'http://172.16.0.115:9191'
+    config.dbConfig = karate.read('classpath:DBConfig_test.json')
   } else if (env == 'e2e') {
     // customize
     config.vMockURL = 'http://172.16.0.115:9191'
+    config.dbConfig = karate.read('classpath:DBConfig_pre.json')
   }
 
   //设置请求超时时间

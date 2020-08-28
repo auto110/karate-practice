@@ -1,0 +1,6 @@
+{
+  jdbcUrl: 'jdbc:mysql://127.0.0.1:3306/karateAuto?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&useSSL=false&serverTimezone=UTC',
+  driverClassName: 'com.mysql.cj.jdbc.Driver',
+  username: 'root',
+  password: '123456'
+}
