@@ -2,13 +2,20 @@ function fn() {
   var env = karate.env; // get system property 'karate.env'
   karate.log('karate.env system property was:', env);
   if (!env) {
-    env = 'dev';
+    //如果env未设置，默认使用localhost环境
+    env = 'localhost';
   }
 
   //默认环境配置
   var config = {
     env: env,
-    vMockURL: 'http://127.0.0.1:9191'
+    vMockURL: 'http://localhost:9191'
+  }
+
+  if(env == 'localhost')
+  {
+    config.vMockURL = 'http://localhost:9191'
+    config.dbConfig = karate.read('classpath:DBConfig_test.json')
   }
   if (env == 'dev') {
     // customize
