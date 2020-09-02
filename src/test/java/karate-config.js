@@ -3,7 +3,7 @@ function fn() {
   karate.log('karate.env system property was:', env);
   if (!env) {
     //如果env未设置，默认使用localhost环境
-    env = 'localhost';
+    env = 'dev';
   }
 
   //默认环境配置
