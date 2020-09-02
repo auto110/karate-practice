@@ -28,6 +28,10 @@ function fn() {
     config.dbConfig = karate.read('classpath:DBConfig_pre.json')
   }
 
+  var loginSession = karate.callSingle("classpath:vmock/APIs/login.feature", config)
+  config.JSESSIONID = loginSession.JSESSIONID
+  config.rememberMe = loginSession.rememberMe
+
   //设置请求超时时间
   karate.configure('connectTimeout', 10000);
   return config;
