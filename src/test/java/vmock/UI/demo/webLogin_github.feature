@@ -1,3 +1,4 @@
+@ignore
 Feature: 浏览器端登录
 
   Background:
