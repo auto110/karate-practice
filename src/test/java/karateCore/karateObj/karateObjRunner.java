@@ -1,4 +1,4 @@
-package karateUsage.karateObj;
+package karateCore.karateObj;
 
 import com.intuit.karate.KarateOptions;
 import com.intuit.karate.junit4.Karate;
