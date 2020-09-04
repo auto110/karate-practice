@@ -1,4 +1,6 @@
-Feature: karate.env - gets the value (read-only) of the environment property 'karate.env'
+Feature: karate.env
+  - gets the value (read-only) of the environment property 'karate.env'
+
   Background:
      #
 
