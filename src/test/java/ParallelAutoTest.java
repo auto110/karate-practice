@@ -19,6 +19,7 @@ public class ParallelAutoTest {
     @BeforeClass
     public static void beforeClass() throws Exception{
         //可在此处启动后台服务
+        System.setProperty("karate.env","localhost");
     }
 
     @Test

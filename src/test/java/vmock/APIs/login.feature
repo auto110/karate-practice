@@ -21,7 +21,6 @@ Feature: v-mock 模拟接口的测试
 
     * call read("classpath:vmock/APIs/login.feature@api")
     * match $ contains {"code":0,"msg":"操作成功"}
-    * print "返回cookies：", responseCookies
 
     * def JSESSIONID = responseCookies.JSESSIONID.value
     * def rememberMe = responseCookies.rememberMe.value

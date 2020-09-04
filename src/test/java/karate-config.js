@@ -28,7 +28,7 @@ function fn() {
     config.dbConfig = karate.read('classpath:DBConfig_pre.json')
   }
 
-  var loginSession = karate.callSingle("classpath:vmock/APIs/login.feature", config)
+  var loginSession = karate.callSingle("classpath:vmock/APIs/login.feature@login_success", config)
   config.JSESSIONID = loginSession.JSESSIONID
   config.rememberMe = loginSession.rememberMe
 

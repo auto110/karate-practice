@@ -7,6 +7,8 @@ create a database and initialize the data: docs/user.sql
 ### run test case （执行测试用例）
 file path: utils/DBUtils.feature 
 
+## vMock system startup
+
 
 ## ParallelAutoTest (并发执行方式)
 go to the directory where the pom.xml file lives in and then run:
