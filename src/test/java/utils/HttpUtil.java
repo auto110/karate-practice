@@ -31,6 +31,7 @@ public class HttpUtil {
     
     /**
      * post请求测试
+     * 入参类型:json
      */
     public static void requestPost(String requestUrl, Map<String, String> param) {
         httppost = new HttpPost(requestUrl);
@@ -54,7 +55,7 @@ public class HttpUtil {
     }
     /**
      * get请求测试
-     *
+     * 入参类型:json
      * @param requestUrl
      * @param param
      */
@@ -82,14 +83,14 @@ public class HttpUtil {
     public static void main(String[] args) {
         HashMap<String, String> map = new HashMap<>();
         map.put("id", "1000");
-        map.put("name", "彭正发");
+        map.put("name", "发哥");
         HttpUtil.requestGet("http://127.0.0.1:8080/index", map);
         
-        //        HashMap<String, String> map = new HashMap<>();
-        //        map.put("caseIds", "['b5e137c7-dbbf-4d36-a9ab-3854878f3d83']");
-        //        map.put("originType", "miniprogram");
-        //        map.put("usertoken",
-        //                "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJiaW9zYW4iLCJzdWIiOiJ0b2tlbiIsImF1ZCI6ImJpb3Nhbi1zYWFzIiwianRpIjoiODA0NzY1ZGYzMWY3NGFlZjhkOWIxZGZjMGM5YjM5MDcifQ.C2NINu6Thl8HtqAlSSIP1RBfg6AgiY7aQ1bygV3iaVQYTryBd83AiLTmUM2aXCGEdSKf8Kuw_HACgUmFl27Ww3IfFE6IIqdQNi-QMkflPvKlQUFBIOsipuvuEnMRolzHtVU32tNo2dPgeE1S91c0HaLAcAUlUXWdJrVjTpxXHjxTJ-NoI9jh507r7cBHd0cg78T4lCv-vQvLxHS6uaexBacFE6oeHLW7ADljiG8S6nmkRHoRYK30sZQbJQLABex8Ky5uDGk6tXqrXvnY8_B75M4IwlJLvxQjT70GVwbx5UcaKlfJZ7GseOAxPZnNiti7x35rIwmVAM_myDxVcvaiNw");
-        //        HttpUtil.requestPost("http://xcx.sys.saas.biosan.cn/treat/applet/getCases", map);
+//                HashMap<String, String> map = new HashMap<>();
+//                map.put("caseIds", "['b5e137c7-dbbf-4d36-a9ab-3854878f3d83']");
+//                map.put("originType", "miniprogram");
+//                map.put("usertoken",
+//                        "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJiaW9zYW4iLCJzdWIiOiJ0b2tlbiIsImF1ZCI6ImJpb3Nhbi1zYWFzIiwianRpIjoiODA0NzY1ZGYzMWY3NGFlZjhkOWIxZGZjMGM5YjM5MDcifQ.C2NINu6Thl8HtqAlSSIP1RBfg6AgiY7aQ1bygV3iaVQYTryBd83AiLTmUM2aXCGEdSKf8Kuw_HACgUmFl27Ww3IfFE6IIqdQNi-QMkflPvKlQUFBIOsipuvuEnMRolzHtVU32tNo2dPgeE1S91c0HaLAcAUlUXWdJrVjTpxXHjxTJ-NoI9jh507r7cBHd0cg78T4lCv-vQvLxHS6uaexBacFE6oeHLW7ADljiG8S6nmkRHoRYK30sZQbJQLABex8Ky5uDGk6tXqrXvnY8_B75M4IwlJLvxQjT70GVwbx5UcaKlfJZ7GseOAxPZnNiti7x35rIwmVAM_myDxVcvaiNw");
+//                HttpUtil.requestPost("http://xcx.sys.saas.biosan.cn/treat/applet/getCases", map);
     }
 }
