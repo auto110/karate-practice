@@ -2,7 +2,7 @@ Feature: Demo test
   - https://reqres.in/
 
   Background: 
-    * url 'https://reqres.in/api'
+    * url reqresURL
   
   @Demo
   Scenario: Sample Api to be tested
