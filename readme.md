@@ -5,11 +5,22 @@
         *   create a database and initialize the data: docs/user.sql
 2. startup/setup the vmock system
 
-## ParallelAutoTest (并发执行)
+## 执行
+### ParallelAutoTest (并发执行)
 go to the directory where the pom.xml file lives in and then run:
 ```shell script
 mvn clean test
 ```
+Java代码指定执行环境
+```java
+System.setProperty("karate.env", "test");
+```
+
+### 测试集执行
+```shell script
+$ mvn clean test -DargLine="-Dkarate.env=test" -Dtest=VMockRunner.java
+```
+其中，通过-DargLine设置Dkarate.env指定的执行环境；-Dtest定义执行的测试集（VMockRunner.java是Java文件的相对路径名称）
 
 ## Test report (查看测试报告)
 1. go to path: target/cucumber-html-reports
