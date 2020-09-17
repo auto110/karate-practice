@@ -17,7 +17,7 @@ import java.util.*;
 /**
  * @author pengzhengfa
  */
-public class HttpUtil {
+public class HttpClientUtil {
     
     private static HttpClient httpClient = new DefaultHttpClient();
     
@@ -84,7 +84,7 @@ public class HttpUtil {
         HashMap<String, String> map = new HashMap<>();
         map.put("id", "1000");
         map.put("name", "发哥");
-        HttpUtil.requestGet("http://127.0.0.1:8080/index", map);
+        HttpClientUtil.requestGet("http://127.0.0.1:8080/index", map);
         
 //                HashMap<String, String> map = new HashMap<>();
 //                map.put("caseIds", "['b5e137c7-dbbf-4d36-a9ab-3854878f3d83']");

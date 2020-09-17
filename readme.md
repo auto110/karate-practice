@@ -11,16 +11,18 @@ go to the directory where the pom.xml file lives in and then run:
 ```shell script
 mvn clean test
 ```
+
 Java代码指定执行环境
 ```java
 System.setProperty("karate.env", "test");
 ```
 
 ### 测试集执行
+切换测试执行环境
 ```shell script
 $ mvn clean test -DargLine="-Dkarate.env=test" -Dtest=VMockRunner.java
 ```
-其中，通过-DargLine设置Dkarate.env指定的执行环境；-Dtest定义执行的测试集（VMockRunner.java是Java文件的相对路径名称）
+其中，通过-DargLine设置Dkarate.env指定的执行环境；-Dtest指定用例执行的测试集（VMockRunner.java是Java文件的相对路径名称）
 
 ## Test report (查看测试报告)
 1. go to path: target/cucumber-html-reports

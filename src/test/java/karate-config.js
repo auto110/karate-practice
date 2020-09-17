@@ -17,8 +17,7 @@ function fn() {
   {
     config.vMockURL = 'http://localhost:9191'
     config.dbConfig = karate.read('classpath:DBConfig_test.json')
-  }
-  if (env == 'test') {
+  } else if (env == 'test') {
     // customize
     // e.g. config.foo = 'bar';
     config.vMockURL = 'http://172.16.0.115:9191'
@@ -32,8 +31,6 @@ function fn() {
   var loginSession = karate.callSingle("classpath:vmock/APIs/login.feature@login_success", config)
   config.JSESSIONID = loginSession.JSESSIONID
   config.rememberMe = loginSession.rememberMe
-
-  config.reqresURL = 'https://reqres.in/api'
 
   //设置请求超时时间
   karate.configure('connectTimeout', 10000);

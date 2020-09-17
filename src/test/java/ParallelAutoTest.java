@@ -19,13 +19,16 @@ public class ParallelAutoTest {
     @BeforeClass
     public static void beforeClass() throws Exception{
         //可在此处启动后台服务
-        System.setProperty("karate.env","test");
+//        System.setProperty("karate.env","test");
+
     }
 
     @Test
     public void testParallel(){
-        Results results =Runner.parallel(getClass(),20,"target/karatedemoReport");
+        String env = System.getProperty("karate.env");
+        System.out.println("当前测试环境变量值:" + env);
 
+        Results results =Runner.parallel(getClass(),20,"target/karatedemoReport");
         generateReport(results.getReportDir());
         assertTrue(results.getErrorMessages(), results.getFailCount()==0);
     }
