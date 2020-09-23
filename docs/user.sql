@@ -1,6 +1,6 @@
 create database if not exists karateAuto;
 use karateAuto;
-drop table user;
+drop table if exists user;
 create table if not exists user
 (
     id    int auto_increment primary key,

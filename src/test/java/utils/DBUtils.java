@@ -85,12 +85,6 @@ public class DBUtils {
         dbConfigMap.put("password","123456");
         dbConfigMap.put("driverClassName","com.mysql.cj.jdbc.Driver");
 
-        logger.info("=====================开始执行单条sql语句======================");
-        DBUtils dbUtils = new DBUtils(dbConfigMap);
-        Object name = dbUtils.readValue("select name from user where accountID = '100001'");
-        System.out.println("姓名：" + name.toString());
-        logger.info("=====================单条sql语句执行完成======================");
-        System.out.println();
         String sqlFile_relativePath = "docs/user.sql";
         logger.info("=====================开始执行sql脚本文件,初始化数据库" + sqlFile_relativePath + "======================");
         //执行数据库脚本
@@ -100,5 +94,12 @@ public class DBUtils {
             System.out.println("数据库脚本执行过程出现异常，请检查！");
         }
         logger.info("=====================" + sqlFile_relativePath + "文件执行完成======================");
+
+        System.out.println();
+        logger.info("=====================开始执行单条sql语句======================");
+        DBUtils dbUtils = new DBUtils(dbConfigMap);
+        Object name = dbUtils.readValue("select name from user where accountID = '100001'");
+        System.out.println("姓名：" + name.toString());
+        logger.info("=====================单条sql语句执行完成======================");
     }
 }
