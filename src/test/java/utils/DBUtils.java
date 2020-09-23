@@ -64,7 +64,7 @@ public class DBUtils {
         try {
             Class.forName(driver);
             Connection mConnection = DriverManager.getConnection(jdbcUrl,username,password);
-            ScriptRunner runner = new ScriptRunner(mConnection, false, false);
+            ScriptRunner runner = new ScriptRunner(mConnection, false, true);
             runner.runScript(new BufferedReader(new FileReader(sqlFile_relativePath)));
         } catch (ClassNotFoundException e) {
             System.err.println("Unable to get mysql driver: " + e);
