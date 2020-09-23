@@ -1,5 +1,6 @@
 create database if not exists karateAuto;
 use karateAuto;
+drop table user;
 create table if not exists user
 (
     id    int auto_increment primary key,
@@ -10,6 +11,7 @@ create table if not exists user
     operation_time timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT charset = utf8;
 
+delete from user;
 
 insert into user values (1, "张三", 22, "羽毛球",100001, NOW());
 insert into user values (2, "李四", 23, "篮球",100002,NOW());
