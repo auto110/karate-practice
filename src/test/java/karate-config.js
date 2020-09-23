@@ -20,11 +20,11 @@ function fn() {
   } else if (env == 'test') {
     // customize
     // e.g. config.foo = 'bar';
-    config.vMockURL = 'http://172.16.0.115:9191'
+    config.vMockURL = 'http://172.17.90.115:9191'
     config.dbConfig = karate.read('classpath:DBConfig_test.json')
   } else if (env == 'e2e') {
     // customize
-    config.vMockURL = 'http://172.16.0.115:9191'
+    config.vMockURL = 'http://172.17.90.115:9191'
     config.dbConfig = karate.read('classpath:DBConfig_pre.json')
   }
 
