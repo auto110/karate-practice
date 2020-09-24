@@ -2,8 +2,8 @@ function fn() {
   var env = karate.env; // get system property 'karate.env'
   karate.log('karate.env system property was:', env);
   if (!env) {
-    //如果env未设置，默认使用localhost环境
-    env = 'localhost';
+    //如果env未设置，默认使用test环境
+    env = 'test';
   }
 
   //默认环境配置
